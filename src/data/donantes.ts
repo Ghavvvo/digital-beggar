@@ -3,75 +3,21 @@ import { Donor, WalletAddress } from '@/types';
 export const donors: Donor[] = [
   {
     id: 1,
-    name: "CryptoWhale42",
-    amount: "0.1",
+    name: "Anonymous_Helper",
+    amount: "0.00025",
     cryptocurrency: "BTC",
-    date: "2024-12-25",
-    emoji: "🐋",
-    message: "Hope this helps you HODL longer!"
+    date: "2025-7-1",
+    emoji: "👤",
+    message: "Every satoshi counts, brother"
   },
   {
     id: 2,
-    name: "ElonMusksFan",
-    amount: "420.69",
-    cryptocurrency: "DOGE",
-    date: "2024-12-24",
-    emoji: "🚀",
-    message: "Much wow, very donation"
-  },
-  {
-    id: 3,
-    name: "DiamondHands💎",
-    amount: "2.5",
-    cryptocurrency: "ETH",
-    date: "2024-12-23",
-    emoji: "💎",
-    message: "HODL until death!"
-  },
-  {
-    id: 4,
-    name: "SatoshiGhost",
-    amount: "0.00001337",
-    cryptocurrency: "BTC",
-    date: "2024-12-22",
-    emoji: "👻",
-    message: "1 satoshi = 1 satoshi"
-  },
-  {
-    id: 5,
-    name: "PumpAndDumpKing",
-    amount: "1000000",
-    cryptocurrency: "SHIB",
-    date: "2024-12-21",
-    emoji: "👑",
-    message: "To the moon! 🌙"
-  },
-  {
-    id: 6,
-    name: "VitaliksCousin",
-    amount: "3.14",
-    cryptocurrency: "ETH",
-    date: "2024-12-20",
-    emoji: "🧠",
-    message: "Gas fees are higher than my donation"
-  },
-  {
-    id: 7,
-    name: "HODLmaster3000",
-    amount: "100",
+    name: "CoffeeSkipper",
+    amount: "5.0",
     cryptocurrency: "USDT",
-    date: "2024-12-19",
-    emoji: "🔥",
-    message: "Stablecoins for stability"
-  },
-  {
-    id: 8,
-    name: "CryptoNewbie",
-    amount: "0.5",
-    cryptocurrency: "ETH",
-    date: "2024-12-18",
-    emoji: "🤓",
-    message: "I sold my car for this donation"
+    date: "2025-6-29",
+    emoji: "☕",
+    message: "Skipped my coffee this week for you"
   }
 ];
 

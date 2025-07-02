@@ -1,3 +1,5 @@
+'use client';
+
 import Navigation from '@/components/Navigation';
 import { donors } from '@/data/donantes';
 
@@ -16,7 +18,7 @@ export default function DonorsPage() {
             Heroes Without Capes (But With Wallets)
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            These brave blockchain warriors have decided to feed this digital beggar.
+            These brave souls have decided to feed this digital beggar.
             Their names will be forever engraved in the blockchain of my heart.
           </p>
         </div>
@@ -26,25 +28,25 @@ export default function DonorsPage() {
           <div className="bg-white rounded-lg shadow-lg p-6 text-center">
             <div className="text-3xl mb-2">💰</div>
             <div className="text-2xl font-bold text-green-600">{donors.length}</div>
-            <div className="text-gray-600">VIP Donors</div>
+            <div className="text-gray-600">Generous Souls</div>
           </div>
           <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-            <div className="text-3xl mb-2">🚀</div>
+            <div className="text-3xl mb-2">🙏</div>
             <div className="text-2xl font-bold text-blue-600">∞</div>
             <div className="text-gray-600">Infinite Gratitude</div>
           </div>
           <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-            <div className="text-3xl mb-2">😭</div>
-            <div className="text-2xl font-bold text-purple-600">-99%</div>
-            <div className="text-gray-600">Misery Reduced</div>
+            <div className="text-3xl mb-2">😢</div>
+            <div className="text-2xl font-bold text-purple-600">-50%</div>
+            <div className="text-gray-600">Tears Reduced</div>
           </div>
         </div>
 
         {/* Donors Table */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6">
-            <h3 className="text-2xl font-bold">🏆 The Chosen Ones of Crypto-Kingdom</h3>
-            <p className="mt-2 opacity-90">I sold myself for 0.001 ETH and here are the buyers</p>
+            <h3 className="text-2xl font-bold">🏆 The Noble Few</h3>
+            <p className="mt-2 opacity-90">Quality over quantity - these legends actually donated!</p>
           </div>
 
           <div className="overflow-x-auto">
@@ -76,7 +78,7 @@ export default function DonorsPage() {
                             {donor.name}
                           </div>
                           <div className="text-sm text-gray-500">
-                            Position #{index + 1} in my heart
+                            Legend #{index + 1}
                           </div>
                         </div>
                       </div>
@@ -98,7 +100,7 @@ export default function DonorsPage() {
                     </td>
                     <td className="px-6 py-4">
                       <div className="text-sm text-gray-900 max-w-xs">
-                        {donor.message || "Silent but powerful donation 🤫"}
+                        {donor.message || "Silent but golden donation 🤫"}
                       </div>
                     </td>
                   </tr>
@@ -108,21 +110,45 @@ export default function DonorsPage() {
           </div>
         </div>
 
-        {/* Footer CTA */}
-        <div className="mt-12 text-center">
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 max-w-2xl mx-auto">
-            <h4 className="text-lg font-bold text-yellow-800 mb-2">
-              🎭 Want to appear here?
+        {/* Join the Hall of Fame */}
+        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-8 max-w-3xl mx-auto">
+          <div className="text-center">
+            <h4 className="text-2xl font-bold text-yellow-800 mb-4">
+              🌟 Want to Join This Elite Club?
             </h4>
-            <p className="text-yellow-700 mb-4">
-              Become a blockchain legend and earn a place in this prestigious table of desperation.
+            <p className="text-yellow-700 mb-6">
+              Become a blockchain legend and earn your place in this exclusive table of awesomeness.
+              Just remember our high-tech donation processing system...
             </p>
-            <a
-              href="/"
-              className="inline-block bg-yellow-600 text-white py-2 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
-            >
-              Donate Now and Be Immortal 🏅
-            </a>
+
+            {/* Email Instructions */}
+            <div className="bg-white rounded-lg p-6 mb-6">
+              <h5 className="font-bold text-gray-800 mb-3">📧 How to Get Listed:</h5>
+              <ol className="text-left text-gray-700 space-y-2 max-w-md mx-auto">
+                <li>1. Make your crypto donation</li>
+                <li>2. Email <strong className="text-blue-600">itsdigitalbeggar@gmail.com</strong></li>
+                <li>3. Include: Name, amount, crypto type, message</li>
+                <li>4. Wait for manual processing (because I'm poor and automation costs money)</li>
+              </ol>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/#donation-section"
+                className="bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
+              >
+                💰 Donate Now
+              </a>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText('itsdigitalbeggar@gmail.com');
+                  alert('Email copied! Ready to become legendary? 📧');
+                }}
+                className="bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+              >
+                📋 Copy Email
+              </button>
+            </div>
           </div>
         </div>
       </main>
