@@ -4,8 +4,52 @@ import Image from "next/image";
 import Navigation from '@/components/Navigation';
 import WalletCard from '@/components/WalletCard';
 import { walletAddresses } from '@/data/donantes';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [dayCount, setDayCount] = useState(0);
+  const [currentMillionaire, setCurrentMillionaire] = useState('');
+  const [currentPhrase, setCurrentPhrase] = useState('');
+
+  const techMillionaires = [
+    'Elon Musk', 'Jeff Bezos', 'Bill Gates', 'Mark Zuckerberg', 'Larry Page',
+    'Sergey Brin', 'Warren Buffett', 'Larry Ellison', 'Tim Cook', 'Satya Nadella',
+    'Jensen Huang', 'Marc Benioff', 'Reed Hastings', 'Jack Dorsey', 'Michael Dell',
+    'Vitalik Buterin', 'Sam Altman', 'Brian Chesky', 'Daniel Ek', 'Patrick Collison'
+  ];
+
+  const funnyPhrases = [
+    'to accidentally send Bitcoin instead of buying another yacht',
+    'to fat-finger a donation while checking their bank balance',
+    'to mistake my wallet for their tax write-off account',
+    'to drop some pocket change (aka my life savings)',
+    'to accidentally solve my poverty while debugging their code',
+    'to send crypto instead of a LinkedIn connection request',
+    'to donate by accident while flexing their net worth',
+    'to think my address is their cold storage wallet',
+    'to make it rain satoshis instead of buying another mansion',
+    'to confuse my QR code with their coffee shop payment',
+    'to send me their Tesla money by mistake',
+    'to accidentally copy-paste the wrong wallet address'
+  ];
+
+  useEffect(() => {
+    // Calculate days since July 1, 2025 (yesterday from current date July 2, 2025)
+    const startDate = new Date('2025-07-01');
+    const currentDate = new Date();
+    const diffTime = Math.abs(currentDate.getTime() - startDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    setDayCount(diffDays);
+
+    // Select a random millionaire based on current session
+    const randomIndex = Math.floor(Math.random() * techMillionaires.length);
+    setCurrentMillionaire(techMillionaires[randomIndex]);
+
+    // Select a random funny phrase
+    const randomPhraseIndex = Math.floor(Math.random() * funnyPhrases.length);
+    setCurrentPhrase(funnyPhrases[randomPhraseIndex]);
+  }, []);
+
   const copyToClipboard = (address: string) => {
     navigator.clipboard.writeText(address);
     alert('Address copied! Thanks for your generosity 🙏');
@@ -73,6 +117,17 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Day Counter Section */}
+        <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-8 max-w-md mx-auto text-center">
+          <p className="text-purple-800 text-sm font-semibold mb-2">
+            ⏰ Day #{dayCount} waiting for {currentMillionaire}
+          </p>
+          <p className="text-purple-700 text-xs italic">
+            {currentPhrase} 🤞
+          </p>
+        </div>
+
+
         {/* Donation Hat Section */}
         <div id="donation-section" className="bg-white rounded-lg shadow-lg p-8 mb-12">
           <div className="text-center mb-8">
@@ -82,24 +137,6 @@ export default function Home() {
             <p className="text-gray-600 mb-4">
               Every satoshi counts. Every wei matters. Every USDT is a tear of happiness.
             </p>
-
-            {/* Email Notice */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 max-w-2xl mx-auto">
-              <div className="flex items-start">
-                <div className="text-xl mr-3">📧</div>
-                <div className="text-left">
-                  <p className="text-blue-800 font-semibold mb-2">
-                    Manual Donation Processing™
-                  </p>
-                  <p className="text-blue-700 text-sm mb-2">
-                    After donating, email <strong>itsdigitalbeggar@gmail.com</strong> with your details to be added to our prestigious Hall of Fame.
-                  </p>
-                  <p className="text-blue-600 text-xs italic">
-                    Yes, it's 2024 and I still can't afford automation. The irony is not lost on me. 🤦‍♂️
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
