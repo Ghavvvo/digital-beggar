@@ -64,12 +64,7 @@ export default function Home() {
         <main className="max-w-4xl mx-auto px-4 py-12">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <div className="mb-8">
-              {/* Meme-style beggar placeholder */}
-              <div className="w-64 h-64 mx-auto bg-gray-200 rounded-full flex items-center justify-center text-8xl">
-                🥺
-              </div>
-            </div>
+
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Welcome to the
@@ -79,6 +74,16 @@ export default function Home() {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Where crypto dreams come to die and satoshis are rarer than my job opportunities
             </p>
+            <div className="mb-8">
+              {/* Meme-style beggar placeholder */}
+              <Image
+                  src="/digitalBeggar.png"
+                  alt="me"
+                  width={256}
+                  height={256}
+                  className="w-64 h-64 mx-auto rounded-full object-cover bg-gray-200"
+              />
+            </div>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8 text-left max-w-2xl mx-auto">
               <div className="flex">
@@ -87,7 +92,8 @@ export default function Home() {
                 </div>
                 <div className="ml-3">
                   <p className="text-sm text-yellow-700">
-                    <strong>Warning:</strong> This beggar accepts crypto donations because banks won't give me credit anymore.
+                    <strong>Warning:</strong> This beggar accepts crypto donations because banks won't give me credit
+                    anymore.
                     All donations will be used to HODL until it's worth something... or not.
                   </p>
                 </div>
@@ -96,7 +102,8 @@ export default function Home() {
           </div>
 
           {/* Story Hook Section */}
-          <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg shadow-lg p-8 mb-12 border border-red-200">
+          <div
+              className="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg shadow-lg p-8 mb-12 border border-red-200">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 💀 How I Lost Everything in Crypto
