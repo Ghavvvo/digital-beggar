@@ -8,7 +8,7 @@ export default function DonorsPage() {
     <div className="min-h-screen bg-gray-50">
       <Navigation />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
+      <main className="max-w-6xl mx-auto px-4 pt-32 pb-12">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">

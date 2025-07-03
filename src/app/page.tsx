@@ -61,7 +61,7 @@ export default function Home() {
       <div className="min-h-screen bg-gray-50">
         <Navigation />
 
-        <main className="max-w-4xl mx-auto px-4 py-12">
+        <main className="max-w-4xl  mx-auto px-4 pt-32 pb-12">
           {/* Hero Section */}
           <div className="text-center mb-16">
 
@@ -127,11 +127,11 @@ export default function Home() {
           </div>
 
           {/* Day Counter Section */}
-          <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-8 max-w-md mx-auto text-center">
-            <p className="text-purple-800 text-sm font-semibold mb-2">
+          <div className="bg-purple-50 border border-purple-200 rounded-lg p-10 mb-8  mx-auto text-center">
+            <p className="text-purple-800 text-xl font-semibold mb-2">
               ⏰ Day #{dayCount} waiting for {currentMillionaire}
             </p>
-            <p className="text-purple-700 text-xs italic">
+            <p className="text-purple-700 text-s italic">
               {currentPhrase} 🤞
             </p>
           </div>
@@ -210,7 +210,7 @@ export default function Home() {
         </main>
 
         {/* Footer with Sponsors */}
-        <footer className="bg-gray-900 text-white py-12 mt-16">
+        <footer className="bg-gray-900 text-white pt-32 pb-12 mt-16">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-6">
