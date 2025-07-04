@@ -12,9 +12,9 @@ export default function DonorsPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            👑 Donors Hall of Fame
+            Donors Hall of Fame
           </h1>
-          <h2 className="text-2xl text-purple-600 mb-6">
+          <h2 className="text-2xl text-yellow-600 mb-6">
             Heroes Without Capes (But With Wallets)
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -44,7 +44,7 @@ export default function DonorsPage() {
 
         {/* Donors Table */}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6">
+          <div className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white p-6">
             <h3 className="text-2xl font-bold">🏆 The Noble Few</h3>
             <p className="mt-2 opacity-90">Quality over quantity - these legends actually donated!</p>
           </div>
@@ -137,7 +137,7 @@ export default function DonorsPage() {
                 href="/#donation-section"
                 className="bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
               >
-                💰 Donate Now
+                 Donate Now
               </a>
               <button
                 onClick={() => {
@@ -146,7 +146,7 @@ export default function DonorsPage() {
                 }}
                 className="bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
               >
-                📋 Copy Email
+                Copy Email
               </button>
             </div>
           </div>

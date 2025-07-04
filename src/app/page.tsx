@@ -121,7 +121,7 @@ export default function Home() {
                   href="/story"
                   className="inline-block bg-red-500 text-white py-3 px-8 rounded-lg font-semibold hover:bg-red-700 transition-colors"
               >
-                Read My Tragic Tale 📖
+                Read My Tragic Tale
               </a>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function Home() {
               ⏰ Day #{dayCount} waiting for {currentMillionaire}
             </p>
             <p className="text-purple-700 text-s italic">
-              {currentPhrase} 🤞
+              {currentPhrase}
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function Home() {
           <div className="bg-gray-100 rounded-lg shadow-lg p-8 mb-12">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                💬 Got Questions? Suggestions? Pity?
+                Got Questions? Suggestions? Pity?
               </h3>
               <p className="text-gray-600 mb-6">
                 Drop me a line! I promise to read every email while crying softly.
@@ -204,7 +204,7 @@ export default function Home() {
                 href="/donors"
                 className="inline-block bg-purple-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
-              View Hall of Fame 👑
+              View Hall of Fame
             </a>
           </div>
         </main>
@@ -214,7 +214,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-6">
-                💼 Our Generous Sponsors
+                Our Generous Sponsors
               </h3>
               {sponsors.length > 0 ? (
                   <div className="grid md:grid-cols-3 gap-6">
@@ -227,7 +227,7 @@ export default function Home() {
               ) : (
                   <div className="bg-gray-800 p-8 rounded-lg">
                     <p className="text-gray-400 text-lg mb-2">
-                      🏜️ Sponsors Array: [ ]
+                       Sponsors Array: [ ]
                     </p>
                     <p className="text-gray-500 text-sm">
                       Still waiting for someone to believe in this beautiful mess...

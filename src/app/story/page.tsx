@@ -14,7 +14,7 @@ export default function StoryPage() {
           <h2 className="text-2xl text-red-600 mb-6">
             A Tale of Love, Loss, and Cryptocurrency
           </h2>
-          <div className="text-6xl mb-6">😭</div>
+          <div className="text-6xl mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Prepare for an emotional journey through the blockchain of my existence...
           </p>
@@ -154,7 +154,7 @@ export default function StoryPage() {
         <div className="mt-12 text-center">
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-8 max-w-2xl mx-auto">
             <h4 className="text-2xl font-bold text-yellow-800 mb-4">
-              Did my story move you? 😢
+              Did my story move you?
             </h4>
             <p className="text-yellow-700 mb-6">
               Be part of the happy ending to this crypto tragedy. Your donation could be the plot twist I need.
@@ -164,13 +164,13 @@ export default function StoryPage() {
                 href="/"
                 className="bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
               >
-                💰 Donate Now
+                 Donate Now
               </a>
               <a
                 href="/donors"
                 className="bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
               >
-                👑 See Other Heroes
+                 See Other Heroes
               </a>
             </div>
           </div>

@@ -65,7 +65,7 @@ export default function AboutPage() {
             {/* Evolution Concept */}
             <div className="mb-12">
               <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center justify-center">
-                <span className="mr-3">🚀</span>
+                <span className="mr-3"></span>
                 Evolution of Everything
               </h3>
               <p className="text-gray-700 leading-relaxed text-center">
