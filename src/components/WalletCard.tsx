@@ -18,13 +18,13 @@ export default function WalletCard({ wallet, onCopy }: WalletCardProps) {
       case 'USDT':
         return 'bg-green-600 hover:bg-green-700';
       default:
-        return 'bg-gray-600 hover:bg-gray-700';
+        return 'bg-purple-600 hover:bg-purple-700';
     }
   };
 
   return (
     <div className={`${wallet.bgColor} border rounded-lg p-6 text-center`}>
-      <div className="text-4xl mb-4">{wallet.symbol}</div>
+      <div className="text-4xl text-gray-600 mb-4">{wallet.symbol}</div>
       <h3 className="font-bold text-lg mb-2 text-gray-900">{wallet.name}</h3>
       <p className="text-sm text-gray-600 mb-4">{wallet.description}</p>
       <div className="bg-white p-3 rounded border text-xs font-mono break-all mb-4 text-gray-800">

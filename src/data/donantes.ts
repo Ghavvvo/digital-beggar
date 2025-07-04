@@ -24,7 +24,7 @@ export const donors: Donor[] = [
 export const walletAddresses: WalletAddress[] = [
   {
     symbol: "₿",
-    address: "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+    address: "bc1qukhh6xf6yn8lrgf35n4yes4zns7wahdqzd560y",
     name: "Bitcoin",
     description: "The digital gold I never had",
     color: "text-orange-600",
@@ -32,7 +32,7 @@ export const walletAddresses: WalletAddress[] = [
   },
   {
     symbol: "Ξ",
-    address: "0x742d35Cc6Bf8f4dE3b8E92e8C7e5D8b1A9C8E3F2",
+    address: "0xa042e89fba310a52d025da02df0a977d0ba7c0a2",
     name: "Ethereum",
     description: "Gas fees cost more than my rent",
     color: "text-blue-600",
@@ -40,10 +40,18 @@ export const walletAddresses: WalletAddress[] = [
   },
   {
     symbol: "₮",
-    address: "TQn9Y2khEsLJW1ChVWFMSMeRDow5oREqjK",
+    address: "0xa042e89fba310a52d025da02df0a977d0ba7c0a2",
     name: "USDT",
     description: "The stability I desperately need",
     color: "text-green-600",
+    bgColor: "bg-green-50 border-green-200"
+  },
+  {
+    symbol: "S",
+    address: "6p7zC2RjhSn9dy9X8xjtSYntZtExx34Zrdx7584pxmzx",
+    name: "Solana",
+    description: "Solana - because why not?",
+    color: "text-yellow-600",
     bgColor: "bg-green-50 border-green-200"
   }
 ];
