@@ -23,7 +23,7 @@ export default function WalletCard({ wallet, onCopy }: WalletCardProps) {
   };
 
   return (
-    <div className={`${wallet.bgColor} border bordar rounded-lg p-6 text-center`}>
+    <div className={`${wallet.bgColor} border rounded-lg p-6 text-center`}>
       <div className="text-4xl mb-4">{wallet.symbol}</div>
       <h3 className="font-bold text-lg mb-2 text-gray-900">{wallet.name}</h3>
       <p className="text-sm text-gray-600 mb-4">{wallet.description}</p>
