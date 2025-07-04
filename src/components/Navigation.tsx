@@ -10,8 +10,8 @@ export default function Navigation() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/donors', label: 'Donors' },
     { href: '/story', label: 'Story' },
+    { href: '/donors', label: 'Donors' },
     { href: '/goals', label: 'Goals' },
     { href: '/about', label: 'About' }
   ];

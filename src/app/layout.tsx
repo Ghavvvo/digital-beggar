@@ -14,6 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Digital Beggar | The Blockchain Misery Corner",
+    icons: {
+        icon: '/favicon.png',
+
+    },
   description: "The humble abode of a digital beggar seeking cryptocurrency donations",
 };
 

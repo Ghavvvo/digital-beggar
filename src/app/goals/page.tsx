@@ -27,12 +27,32 @@ export default function GoalsPage() {
   // Main goal
   const mainGoal = {
     title: "Ultimate Goal: Retire My Grandsons",
-    description: "Reach 0.5 BTC so my future grandsons can retire before they're even born",
+    description: "Reach 1 BTC so my future grandsons can retire before they're even born",
     target: 1,
     current: currentBTC,
     emoji: "👴",
     color: "from-yellow-400 to-orange-500"
   };
+
+  // Intermediate goals
+  const intermediateGoals = [
+    {
+      title: "Professional Begging Setup",
+      description: "Buy a .crypto domain to beg more professionally",
+      target: 0.01,
+      current: currentBTC,
+      emoji: "🌐",
+      color: "from-blue-400 to-purple-500"
+    },
+    {
+      title: "Launch My Own Shitcoin",
+      description: "Fund my own whitepaper: Digital Beggar Coin (DBC) – The shitcoin nobody asked for",
+      target: 0.1,
+      current: currentBTC,
+      emoji: "🪙",
+      color: "from-green-400 to-blue-500"
+    }
+  ];
 
   const calculateProgress = (current: number, target: number) => {
     return Math.min((current / target) * 100, 100);
@@ -123,6 +143,39 @@ export default function GoalsPage() {
               </div>
             </div>
           </div>
+
+          {/* Intermediate Goals */}
+          {intermediateGoals.map((goal, index) => (
+            <div className="mb-12" key={index}>
+              <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-12 border border-white/20">
+                <div className="flex items-center justify-center mb-8">
+                  <span className="text-6xl mr-4">{goal.emoji}</span>
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-gray-800 mb-2">{goal.title}</h3>
+                    <p className="text-lg text-gray-600">{goal.description}</p>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-lg font-medium text-gray-700">Progress to Goal</span>
+                    <span className="text-xl font-bold text-gray-800">
+                      {calculateProgress(goal.current, goal.target).toFixed(2)}%
+                    </span>
+                  </div>
+                  <ProgressBar
+                    progress={calculateProgress(goal.current, goal.target)}
+                    color={goal.color}
+                  />
+                </div>
+
+                <div className="flex justify-between text-lg text-gray-600 mb-6">
+                  <span>{formatBTC(goal.current)} BTC</span>
+                  <span>{formatBTC(goal.target)} BTC</span>
+                </div>
+              </div>
+            </div>
+          ))}
 
           {/* Humorous Stats */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
