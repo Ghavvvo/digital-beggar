@@ -1,6 +1,7 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
+import Link from 'next/link';
 
 export default function AboutPage() {
   const shareUrl = typeof window !== 'undefined' ? window.location.origin : '';
@@ -55,11 +56,34 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-gray-800 mb-6">
                 Satirical & Humorous Project
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 Digital Beggar is a <strong>satirical and humorous page</strong> that reflects on how
                 even the most basic and ancient activities - like begging - evolve and adapt to new
                 technologies over time.
               </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                It&apos;s also a playful way to <strong>mock the volatility and daily losses</strong> that
+                people suffer in the crypto world - turning financial pain into comedy gold,
+                one satoshi at a time.
+              </p>
+            </div>
+
+            {/* Crypto Comedy */}
+            <div className="mb-12 p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border border-red-200">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-red-400 to-orange-500 rounded-full mb-4">
+                  <span className="text-xl">📉</span>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">Crypto Comedy Central</h4>
+                <p className="text-gray-700 mb-4">
+                  From HODL to rekt, from &ldquo;diamond hands&rdquo; to &ldquo;buying the dip&rdquo; (again and again),
+                  this project celebrates the beautiful chaos of cryptocurrency investing where
+                  portfolios vanish faster than promises from DeFi protocols.
+                </p>
+                <p className="text-sm text-gray-600 italic">
+                  &ldquo;Turning -99% into +100% laughs since 2024&rdquo;
+                </p>
+              </div>
             </div>
 
             {/* Evolution Concept */}
@@ -71,7 +95,7 @@ export default function AboutPage() {
               <p className="text-gray-700 leading-relaxed text-center">
                 From street corners to crowdfunding platforms, from hat-in-hand to professional
                 websites with payment gateways - this project explores how technology transforms
-                even humanity's oldest practices into modern, digital experiences.
+                even humanity&apos;s oldest practices into modern, digital experiences.
               </p>
             </div>
 
@@ -131,13 +155,13 @@ export default function AboutPage() {
 
           {/* Back Button */}
           <div className="text-center mt-12">
-            <a
+            <Link
               href="/"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span className="mr-2">←</span>
               Back to Home
-            </a>
+            </Link>
           </div>
 
         </div>

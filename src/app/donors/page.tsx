@@ -1,6 +1,7 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
+import Link from 'next/link';
 import { donors } from '@/data/donantes';
 
 export default function DonorsPage() {
@@ -128,17 +129,17 @@ export default function DonorsPage() {
                 <li>1. Make your crypto donation</li>
                 <li>2. Email <strong className="text-blue-600">itsdigitalbeggar@gmail.com</strong></li>
                 <li>3. Include: Name, amount, crypto type, message</li>
-                <li>4. Wait for manual processing (because I'm poor and automation costs money)</li>
+                <li>4. Wait for manual processing (because I&apos;m poor and automation costs money)</li>
               </ol>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/#donation-section"
                 className="bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
               >
                  Donate Now
-              </a>
+              </Link>
               <button
                 onClick={() => {
                   navigator.clipboard.writeText('itsdigitalbeggar@gmail.com');

@@ -3,8 +3,9 @@
 import Image from "next/image";
 import Navigation from '@/components/Navigation';
 import WalletCard from '@/components/WalletCard';
+import Link from 'next/link';
 import { walletAddresses } from '@/data/donantes';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 export default function Home() {
   const [dayCount, setDayCount] = useState(0);
@@ -13,14 +14,14 @@ export default function Home() {
 
   const sponsors: string[] = [];
 
-  const techMillionaires = [
+  const techMillionaires = useMemo(() => [
     'Elon Musk', 'Jeff Bezos', 'Bill Gates', 'Mark Zuckerberg', 'Larry Page',
     'Sergey Brin', 'Warren Buffett', 'Larry Ellison', 'Tim Cook', 'Satya Nadella',
     'Jensen Huang', 'Marc Benioff', 'Reed Hastings', 'Jack Dorsey', 'Michael Dell',
     'Vitalik Buterin', 'Sam Altman', 'Brian Chesky', 'Daniel Ek', 'Patrick Collison'
-  ];
+  ], []);
 
-  const funnyPhrases = [
+  const funnyPhrases = useMemo(() => [
     'to accidentally send Bitcoin instead of buying another yacht',
     'to fat-finger a donation while checking their bank balance',
     'to mistake my wallet for their tax write-off account',
@@ -33,7 +34,7 @@ export default function Home() {
     'to confuse my QR code with their coffee shop payment',
     'to send me their Tesla money by mistake',
     'to accidentally copy-paste the wrong wallet address'
-  ];
+  ], []);
 
   useEffect(() => {
     // Calculate days since July 1, 2025 (yesterday from current date July 2, 2025)
@@ -50,7 +51,7 @@ export default function Home() {
     // Select a random funny phrase
     const randomPhraseIndex = Math.floor(Math.random() * funnyPhrases.length);
     setCurrentPhrase(funnyPhrases[randomPhraseIndex]);
-  }, []);
+  }, [techMillionaires, funnyPhrases]);
 
   const copyToClipboard = (address: string) => {
     navigator.clipboard.writeText(address);
@@ -92,9 +93,9 @@ export default function Home() {
                 </div>
                 <div className="ml-3">
                   <p className="text-sm text-yellow-700">
-                    <strong>Warning:</strong> This beggar accepts crypto donations because banks won't give me credit
+                    <strong>Warning:</strong> This beggar accepts crypto donations because banks won&apos;t give me credit
                     anymore.
-                    All donations will be used to HODL until it's worth something... or not.
+                    All donations will be used to HODL until it&apos;s worth something... or not.
                   </p>
                 </div>
               </div>
@@ -114,15 +115,15 @@ export default function Home() {
               </p>
               <div className="bg-white p-4 rounded-lg max-w-md mx-auto mb-6">
                 <p className="text-red-600 font-bold italic">
-                  "I turned $50,000 into 12 satoshis. AMA."
+                  &ldquo;I turned $50,000 into 12 satoshis. AMA.&rdquo;
                 </p>
               </div>
-              <a
+              <Link
                   href="/story"
                   className="inline-block bg-red-500 text-white py-3 px-8 rounded-lg font-semibold hover:bg-red-700 transition-colors"
               >
                 Read My Tragic Tale
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -160,7 +161,7 @@ export default function Home() {
 
             <div className="mt-8 text-center">
               <p className="text-sm text-gray-500 italic">
-                "It ain't much, but it's honest work" - Digital Beggar, probably
+                &ldquo;It ain&apos;t much, but it&apos;s honest work&rdquo; - Digital Beggar, probably
               </p>
             </div>
           </div>
@@ -200,12 +201,12 @@ export default function Home() {
             <p className="text-gray-600 mb-6">
               Discover who are the heroes that saved me from instant ramen
             </p>
-            <a
+            <Link
                 href="/donors"
                 className="inline-block bg-purple-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               View Hall of Fame
-            </a>
+            </Link>
           </div>
         </main>
 
@@ -227,7 +228,7 @@ export default function Home() {
               ) : (
                   <div className="bg-gray-800 p-8 rounded-lg">
                     <p className="text-gray-400 text-lg mb-2">
-                       Sponsors Array: [ ]
+                      Sponsors Array: [ ]
                     </p>
                     <p className="text-gray-500 text-sm">
                       Still waiting for someone to believe in this beautiful mess...

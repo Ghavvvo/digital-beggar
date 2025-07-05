@@ -1,6 +1,7 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
+import Link from 'next/link';
 import { donors } from '@/data/donantes';
 
 export default function GoalsPage() {
@@ -27,7 +28,7 @@ export default function GoalsPage() {
   // Main goal
   const mainGoal = {
     title: "Ultimate Goal: Retire My Grandsons",
-    description: "Reach 1 BTC so my future grandsons can retire before they're even born",
+    description: "Reach 1 BTC so my future grandsons can retire before they&apos;re even born",
     target: 1,
     current: currentBTC,
     emoji: "👴",
@@ -138,7 +139,7 @@ export default function GoalsPage() {
                   <strong>{formatBTC(mainGoal.target - mainGoal.current)} BTC</strong> remaining until my grandsons can retire!
                 </p>
                 <p className="text-center text-gray-600 mt-2">
-                  That's only <strong>${((mainGoal.target - mainGoal.current) * 109000).toLocaleString()}</strong> away from generational wealth!
+                  That&apos;s only <strong>${((mainGoal.target - mainGoal.current) * 109000).toLocaleString()}</strong> away from generational wealth!
                 </p>
               </div>
             </div>
@@ -201,15 +202,15 @@ export default function GoalsPage() {
             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Help Secure the Future!</h3>
               <p className="text-lg mb-6 opacity-90">
-                Your donation today = My grandsons' retirement tomorrow
+                Your donation today = My grandsons&apos; retirement tomorrow
               </p>
-              <a
+              <Link
                 href="/"
                 className="inline-flex items-center px-8 py-3 bg-white text-gray-800 font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <span className="mr-2">👴</span>
                 Donate for Future Generations
-              </a>
+              </Link>
             </div>
           </div>
 
