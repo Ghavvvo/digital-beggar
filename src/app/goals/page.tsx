@@ -28,7 +28,7 @@ export default function GoalsPage() {
   // Main goal
   const mainGoal = {
     title: "Ultimate Goal: Retire My Grandsons",
-    description: "Reach 1 BTC so my future grandsons can retire before they&apos;re even born",
+    description: "Reach 1 BTC so my future grandsons can retire before they even born",
     target: 1,
     current: currentBTC,
     emoji: "👴",
